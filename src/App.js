@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 
 import MoviesList from './components/MoviesList';
 import './App.css';
@@ -20,14 +20,14 @@ function App() {
   ];
 
   return (
-    <React.Fragment>
+    <Fragment>
       <section>
         <button>Fetch Movies</button>
       </section>
       <section>
         <MoviesList movies={dummyMovies} />
       </section>
-    </React.Fragment>
+    </Fragment>
   );
 }
 
