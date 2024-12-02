@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
 
-  const [movies,setMovies]= useState();
+  const [movies,setMovies] = useState([]);
 
   // const dummyMovies = [
   //   {
@@ -24,10 +24,10 @@ function App() {
 
   const fetchMoviesHandler = () => {
     fetch('https://swapi.dev/api/films/')
-    .then((response) => {
+    .then(response => {
       return response.json();
     })
-    .then((data) => {
+    .then(data => {
       const transformedMovies = data.results.map(movieData => {
         return {
           id: movieData.episode_id,
